@@ -30,6 +30,11 @@ app.use('/api', userroute); // User routes will start with /api
 app.use('/api', authroute); // Auth routes will start with /api
 app.use('/api', postroutes); // Post routes will start with /api
 
+app.get("/", (req, res) => {
+  res.send("welcome");
+});
+
+
 app.listen(PORT, () => {
   console.log(`your server was run ${PORT}`)
 })
